@@ -1,0 +1,16 @@
+<h2>Sala de chat</h2>
+
+
+  @for (item of listaMensajes; track item) {
+    <li>{{ item }}</li>
+    } @empty {
+    <li>There are no items.</li>
+    }
+
+
+<div class="container">
+    <app-chat [nombre]="nombre1" (mensaje)="actualizarMensajes($event)"></app-chat>    
+    <app-chat [nombre]="nombre2" (mensaje)="actualizarMensajes($event)"></app-chat>
+  </div>
+
+
